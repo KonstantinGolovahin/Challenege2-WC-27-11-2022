@@ -11,35 +11,41 @@
 
 <body>
   <!-- main logo / nav -->
-  <header>
-    <h1>Top header</h1>
+  <header class="nav-bar-grid" id="link-about-me" >
+  <div class="picture-avatar">
+    
+  </div>
+  <div class="name-text" >
+    <h1 id="text-name">Konstantin Golovahin</h1> </div>
     <nav class="nav-bar-style">
       <ul class="ul-links">
-<li >About me</li>
-<li >Work</li>
-<li >Contact me</li>
-<li >About me - this is to download a file</li>
-
-
-
-      </ul>
+<li >
+  <a href="#link-about-me"> About me</a>
+</li>
+<li >
+  <a href="#link-work"> Work</a>
+</li>
+<li >
+  <a href="#link-contact"> Contact me</a></li>
+<li >Resume (download file)</li>
+    </ul>
       
     </nav>
   </header>
-  <!-- main grid 4*5? -->
+ 
 
-  <!-- hero banner -->
-  <section class="hero-banner" >
+  <!-- subheader text -->
+  <section class="subheader-text" >
     <div>
-      <h2 style="background-image: url('./images/02-hero-bg.jpg');">Cool subtitle here!</h2>
+      <h2>Hi all, I am a beginner in front-end development. Please see below some info about myself and my skills</h2>
     </div>
   </section>
 
-  
+   <!-- main grid area -->
     <main class="main-grid-area" >
-        
-      <div class = "container1">
-          <p>Enot1</p>
+        <!-- about user text -->
+      <div class = "container1" id ="link-about-me" >
+          <p>Work</p>
       </div>
       
       <div class="container2">
@@ -49,38 +55,41 @@
           <p>Enot3</p>
       </div>
 
-      
-      <div class="container4"> 
+ <!-- list of apps with clickable images -->
+      <div class="container4" id = "link-work" > 
 
-<div class="picture1">
+<div class="picture1" style="cursor: pointer;" onclick="window.location='https://konstantingolovahin.github.io/prework-study-guide';" >
+  
 <div class="imagetext">
-  <p>some text1</p>
-</div>
+  <p>prework-study-guide</p>
 </div>
 
-<div class="picture2">
+</div>
+
+
+<div class="picture2" style="cursor: pointer;" onclick="window.location='https://konstantingolovahin.github.io/Challenge1/';">
 <div class="imagetext">
-  <p>some text2</p>
+  <p>Challenge 1 completed</p>
 </div>
 </div>
 
 
 
-<div class="picture3" >
+<div class="picture3" style="cursor: pointer;" onclick="window.location='https://konstantingolovahin.github.io/Challenege2-WC-27-11-2022/';">
   <div class="imagetext">
-    <p>some text3</p>
+    <p>Challenge 2 completed</p>
 </div>
 </div>
 
 <div class="picture4" >
   <div class="imagetext">
-    <p>some text4</p>
+    <p>New app to be added later</p>
 </div>
 </div>
 
 <div class="picture5" >
   <div class="imagetext">
-    <p>some text5</p>
+    <p>New app to be added later</p>
 </div>
 </div>
 
@@ -88,7 +97,9 @@
 
 
       </div>
-      <div class="container5">
+
+      <!-- contacts -->
+      <div class="container5" id="link-contact">
           <p>Contact me</p>
       </div>
       <div class="container6">Contact info</div>

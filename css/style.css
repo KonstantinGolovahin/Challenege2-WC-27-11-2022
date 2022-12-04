@@ -1,11 +1,38 @@
+/* general style */
+header {
+  margin-bottom: 0;
+}
 
+section {
+  margin-top: 0px;
+}
 
+/* navigation bar style */
+
+.nav-bar-grid{
+  display:grid;
+  height: 5vh;
+  grid-template-columns: 1fr 2fr 10fr;
+  
+grid-template-areas: 
+"picture-avatar name-text nav-bar-style";
+opacity: 70%;
+background-color: green;
+overflow: hidden;
+}
+
+.nav-bar-style{
+  grid-area: nav-bar-style;
+}
 
 /* navigation bar links style */
 .ul-links {
   display: flex;
-  flex-direction: row-reverse;
-  gap: 50px;
+  column-gap: 50px;
+  justify-content: right;
+  align-items: center;
+  color: blue;
+  
 }
 
 ul.ul-links li {
@@ -13,19 +40,47 @@ ul.ul-links li {
 }
 
 
+/* navigation bar avatar style */
+.picture-avatar {
+  position: relative;
+  background-size: cover;
+  grid-area: picture-avatar;
+  background: url(../images/Avatar.png) no-repeat;
+  width: 5vh; /* as nav-bar-grid size in vh */
+  height: 5vh;
+  max-width: 64px; /* picture size 64*64 */
+  max-height: 64px;
+  display: inside;
+  
+  
+}
+/* navigation bar avatar text style */
+.name-text {
+  
+  font: bold;
+  font-size: large;
+  grid-area: name-text;
+  align-self: center;
+}
+
+#text-name{
+  
+  font-style: italic;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  white-space: nowrap;
+}
 
 
 
 
 
-
-
-
+/* main grid style */
 .main-grid-area {
   display: grid;
-  height: 100vh;
+  height: 90vh; 
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 0.5fr;
   grid-area: 
   
   "container1 container2"
@@ -34,7 +89,7 @@ ul.ul-links li {
   ;
    
 }
-
+ /* list of containers assigned to a main grid */
 
 .container1{
    
@@ -66,28 +121,14 @@ ul.ul-links li {
 }
 
 
-@media screen and (max-width:700px) {
 
-  .container4 {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-      "picture1"
-      "picture2"
-      "picture3"
-      "picture4"
-      "picture5";
-    }
-
-
-}
-
+/* list of pictures associated with list of apps */
 .picture1 {
   position: relative;
-  background-image: url(../images/02-portfolio-1.jpg);
+   background-image: url(../images/02-portfolio-1.jpg); 
   background-size: cover;
   grid-area: picture1;
+
 }
 
 .picture2 {
@@ -119,7 +160,7 @@ ul.ul-links li {
 }
 
 
-
+/* a box with text description for apps */
 
 .imagetext {
   
@@ -130,6 +171,44 @@ ul.ul-links li {
   right: 70%;
   display: flex;
   align-items: center;
-  color: brown;
+  color: white;
   background-color: aqua;
+}
+
+/* sub title text style */
+
+h1, h2{
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: wavy;
+ 
+ padding: 0; /* to prevent a gap between heder and h2 */
+ margin: 0;
+  
+}
+
+.subheader-text{
+  height: 5vh;
+  background-color: lightgrey;
+  opacity: 70%;
+  overflow: hidden; /* hides part of text if resized too much */
+}
+
+/* media queries for adjusting list of apps */
+
+@media screen and (max-width:700px) {
+
+  .container4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "picture1"
+      "picture2"
+      "picture3"
+      "picture4"
+      "picture5";
+    }
+
+
 }
