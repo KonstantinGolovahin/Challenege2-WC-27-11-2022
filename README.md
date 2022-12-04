@@ -18,7 +18,7 @@ Not required
 
 ## Usage
 
-Used mostly for demonsration purposes. There are no actual web applications to demonstrate as i am just a beginner, therefore at the moment there are links to deployed challnges and pre-work. This page contains a couple of placeholders purely for better matching a proposed structure.
+Used mostly for demonsration purposes. There are no actual web applications to demonstrate as i am just a beginner, therefore at the moment there are links to deployed challenges and pre-work (my first application). This page contains a couple of placeholders purely for better matching a proposed structure.
 
 
 
