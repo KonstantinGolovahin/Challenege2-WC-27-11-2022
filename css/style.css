@@ -1,23 +1,135 @@
-* {
-  box-sizing: border-box;
+
+
+
+/* navigation bar links style */
+.ul-links {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+ul.ul-links li {
+  list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+
+
+
+
+
+
+
+
+
+.main-grid-area {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-area: 
+  
+  "container1 container2"
+  "container3 container4"
+  "container5 container6"
+  ;
+   
 }
 
-p {
-  margin: 0;
+
+.container1{
+   
+  background-color: red;
+}
+
+.container2{
+ 
+  background-color: yellow;
+}
+.container3{
+  
+  background-color: yellowgreen;
+}
+ .container5, .container6 {
+  
+  background-color: grey;
+}
+
+
+.container4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "picture1 picture1"
+  "picture2 picture3"
+  "picture4 picture5";
+}
+
+
+@media screen and (max-width:700px) {
+
+  .container4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "picture1"
+      "picture2"
+      "picture3"
+      "picture4"
+      "picture5";
+    }
+
+
+}
+
+.picture1 {
+  position: relative;
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
+  grid-area: picture1;
+}
+
+.picture2 {
+  position: relative;
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
+  grid-area: picture2;
+}
+
+.picture3 {
+  position: relative;
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
+  grid-area: picture3;
+}
+
+.picture4 {
+  position: relative;
+  background-image: url(../images/02-portfolio-4.jpg);
+  background-size: cover;
+  grid-area: picture4;
+}
+
+.picture5 {
+  position: relative;
+  background-image: url(../images/02-run-buddy.jpg);
+  background-size: cover;
+  grid-area: picture5;
+}
+
+
+
+
+.imagetext {
+  
+  position: absolute;
+  top: 70%;
+  bottom: 10%;
+  left: 0;
+  right: 70%;
+  display: flex;
+  align-items: center;
+  color: brown;
+  background-color: aqua;
 }
