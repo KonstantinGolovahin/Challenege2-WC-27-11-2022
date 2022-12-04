@@ -17,7 +17,7 @@ section {
 grid-template-areas: 
 "picture-avatar name-text nav-bar-style";
 opacity: 70%;
-background-color: green;
+background-color: lightgrey;
 overflow: hidden;
 }
 
@@ -79,34 +79,48 @@ ul.ul-links li {
 .main-grid-area {
   display: grid;
   height: 90vh; 
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 4fr 0.5fr;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
   grid-area: 
   
   "container1 container2"
   "container3 container4"
   "container5 container6"
   ;
+   row-gap: 1%;
+   column-gap: 1%;
    
 }
  /* list of containers assigned to a main grid */
 
 .container1{
    
-  background-color: red;
+  background-color: lightgray;
+  border-right: 10px solid;
+  border-color: darkblue;
+  
 }
 
 .container2{
  
-  background-color: yellow;
+  background-color: white;
+  
 }
 .container3{
   
-  background-color: yellowgreen;
+  background-color: lightgray;
+  border-right: 10px solid;
+  border-color: darkblue;
 }
- .container5, .container6 {
+ .container5 {
   
-  background-color: grey;
+  background-color: lightgray;
+  border-right: 10px solid;
+  border-color: darkblue;
+}
+
+.container6{
+  background-color: white;
 }
 
 
@@ -114,6 +128,8 @@ ul.ul-links li {
   display: grid;
   grid-template-columns: 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 1%;
+  grid-row-gap: 1%;
   grid-template-areas:
   "picture1 picture1"
   "picture2 picture3"
@@ -128,14 +144,18 @@ ul.ul-links li {
    background-image: url(../images/02-portfolio-1.jpg); 
   background-size: cover;
   grid-area: picture1;
+  border: 5px solid;
+  border-color: lightblue;
 
 }
 
 .picture2 {
   position: relative;
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/02-portfolio-4.jpg);
   background-size: cover;
   grid-area: picture2;
+  border: 5px solid;
+  border-color: lightblue;
 }
 
 .picture3 {
@@ -143,20 +163,26 @@ ul.ul-links li {
   background-image: url(../images/02-portfolio-3.jpg);
   background-size: cover;
   grid-area: picture3;
+  border: 5px solid;
+  border-color: lightblue;
 }
 
 .picture4 {
   position: relative;
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-image: url(../images/02-portfolio-2.jpg);
   background-size: cover;
   grid-area: picture4;
+  border: 5px solid;
+  border-color: lightblue;
 }
 
 .picture5 {
   position: relative;
-  background-image: url(../images/02-run-buddy.jpg);
+  background-image: url(../images/02-portfolio-2.jpg);
   background-size: cover;
   grid-area: picture5;
+  border: 5px solid;
+  border-color: lightblue;
 }
 
 
@@ -171,8 +197,8 @@ ul.ul-links li {
   right: 70%;
   display: flex;
   align-items: center;
-  color: white;
-  background-color: aqua;
+  color: black;
+  background-color: lightblue;
 }
 
 /* sub title text style */
@@ -182,7 +208,7 @@ h1, h2{
   text-align: center;
   text-decoration: wavy;
  
- padding: 0; /* to prevent a gap between heder and h2 */
+ padding: 0; /* to prevent a gap between header and h2 */
  margin: 0;
   
 }
@@ -211,4 +237,29 @@ h1, h2{
     }
 
 
+}
+
+/* section header style */
+.text-section-title{
+  text-align: center;
+  vertical-align: middle;
+  counter-reset: none;  
+  font-size: 30px;
+  color: darkblue;
+  
+}
+
+
+/* contacts links style */
+.ul-links-user {
+  display: flex;
+  column-gap: 100px;
+  justify-content: center;
+  color: black;
+  vertical-align: middle;
+  
+}
+
+ul.ul-links li {
+  list-style: none;
 }
