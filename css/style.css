@@ -7,6 +7,25 @@ section {
   margin-top: 0px;
 }
 
+/* Headings title text style */
+
+h1, h2{
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: wavy;
+ 
+ padding: 0; /* to prevent a gap between header and h2 */
+ margin: 0;
+  
+}
+
+.text-subheader{
+  height: 5vh;
+  background-color: lightgrey;
+  opacity: 70%;
+  overflow: hidden; /* hides part of text if resized too much */
+}
+
 /* navigation bar style */
 
 .nav-bar-grid{
@@ -69,19 +88,17 @@ ul.ul-links li {
   font-weight: bolder;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   white-space: nowrap;
+  font-size: 3vh;
 }
 
 
-
-
-
-/* main grid style */
+/* main grid begins */
 .main-grid-area {
   display: grid;
   height: 90vh; 
   grid-template-columns: 1fr 10fr;
   grid-template-rows: 0.5fr 5fr 0.5fr;
-  grid-area: 
+  grid-template-areas: 
   
   "container1 container2"
   "container3 container4"
@@ -91,39 +108,38 @@ ul.ul-links li {
    column-gap: 1%;
    
 }
- /* list of containers assigned to a main grid */
+ /* list of containers assigned to a main grid from 1 to 6 */
 
-.container1{
-   
+
+.container-text-header{
   background-color: lightgray;
   border-right: 10px solid;
   border-color: darkblue;
-  
 }
 
-.container2{
+
+
+
+#container-header-about-me{
+   grid-area: container1;
+ }
+
+
+#container-article-about-me{
  
   background-color: white;
+  grid-area: container2;
   
 }
-.container3{
+#container-header-apps{
   
-  background-color: lightgray;
-  border-right: 10px solid;
-  border-color: darkblue;
-}
- .container5 {
-  
-  background-color: lightgray;
-  border-right: 10px solid;
-  border-color: darkblue;
-}
-
-.container6{
-  background-color: white;
+  grid-area: container3;
 }
 
 
+
+
+/* nested grid begins inside main grid for a list of apps from 1 to 5 */
 .container4 {
   display: grid;
   grid-template-columns: 1fr 1fr ;
@@ -139,56 +155,55 @@ ul.ul-links li {
 
 
 /* list of pictures associated with list of apps */
-.picture1 {
+
+/* picture style */
+
+.picture-app{
   position: relative;
-   background-image: url(../images/02-portfolio-1.jpg); 
   background-size: cover;
+  border: 5px solid;
+  border-color: lightblue;
+}
+
+/* picture details */
+#picture-app-pre-work {
+  
+  background-image: url(../images/02-portfolio-1.jpg); 
   grid-area: picture1;
-  border: 5px solid;
-  border-color: lightblue;
+  
 
 }
 
-.picture2 {
-  position: relative;
+#picture-app-challenege1 {
+  
   background-image: url(../images/02-portfolio-4.jpg);
-  background-size: cover;
   grid-area: picture2;
-  border: 5px solid;
-  border-color: lightblue;
-}
 
-.picture3 {
-  position: relative;
+}
+#picture-app-challenege2 {
+  
   background-image: url(../images/02-portfolio-3.jpg);
-  background-size: cover;
   grid-area: picture3;
-  border: 5px solid;
-  border-color: lightblue;
+
 }
 
-.picture4 {
-  position: relative;
+#picture-placeholder1 {
+  
   background-image: url(../images/02-portfolio-2.jpg);
-  background-size: cover;
   grid-area: picture4;
-  border: 5px solid;
-  border-color: lightblue;
-}
 
-.picture5 {
-  position: relative;
+}
+#picture-placeholder2 {
+  
   background-image: url(../images/02-portfolio-2.jpg);
-  background-size: cover;
   grid-area: picture5;
-  border: 5px solid;
-  border-color: lightblue;
+
 }
 
 
-/* a box with text description for apps */
+/* a text box with text description for apps from  */
 
-.imagetext {
+.text-on-image {
   
   position: absolute;
   top: 70%;
@@ -199,45 +214,23 @@ ul.ul-links li {
   align-items: center;
   color: black;
   background-color: lightblue;
-}
-
-/* sub title text style */
-
-h1, h2{
-  font-weight: bolder;
-  text-align: center;
-  text-decoration: wavy;
- 
- padding: 0; /* to prevent a gap between header and h2 */
- margin: 0;
-  
-}
-
-.subheader-text{
-  height: 5vh;
-  background-color: lightgrey;
-  opacity: 70%;
-  overflow: hidden; /* hides part of text if resized too much */
-}
-
-/* media queries for adjusting list of apps */
-
-@media screen and (max-width:700px) {
-
-  .container4 {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-      "picture1"
-      "picture2"
-      "picture3"
-      "picture4"
-      "picture5";
-    }
-
+  font-size: 2vh;
 
 }
+
+/* nested grid ends */
+
+#continer-header-contacts {
+
+  grid-area: container5;
+}
+
+#container-contacts{
+  grid-area: container6;
+}
+/* main grid ends */
+
+
 
 /* section header style */
 .text-section-title{
@@ -262,4 +255,49 @@ h1, h2{
 
 ul.ul-links li {
   list-style: none;
+}
+
+
+
+
+/* media query for smaller screens */
+
+@media screen and (max-width:700px) {
+
+  .container4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "picture1"
+      "picture2"
+      "picture3"
+      "picture4"
+      "picture5";
+    }
+
+
+
+    .nav-bar-grid{
+      display:grid;
+      height: 20vh;
+      grid-template-rows: 1fr 0fr 4fr;
+      
+    grid-template-areas: 
+    "picture-avatar"
+     "name-text"
+     "nav-bar-style";
+    opacity: 70%;
+    background-color: lightgrey;
+    overflow: hidden;
+    }
+
+.text-subheader{
+  visibility:hidden; /* text not visible as not important */
+}
+
+.text-on-image{
+  font-size: 0.8vh;
+}
+
 }
