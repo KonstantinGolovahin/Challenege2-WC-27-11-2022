@@ -1,0 +1,116 @@
+/* media query for smaller screens */
+
+@media screen and (max-width:768px) {
+
+    .container4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "picture1"
+        "picture2"
+        "picture3"
+        "picture4"
+        "picture5";
+      }
+  
+  
+  
+      .nav-bar-grid{
+        display:grid;
+        height: 20vh;
+        grid-template-rows: 1fr 0fr 4fr;
+        
+      grid-template-areas: 
+      "picture-avatar"
+       "name-text"
+       "nav-bar-style";
+      opacity: 70%;
+      background-color: lightgrey;
+      overflow: hidden;
+      }
+  
+  .text-subheader{
+    visibility:hidden; /* text not visible as not important */
+  }
+  
+  .text-on-image{
+    font-size: 0.8vh;
+  }
+  
+  
+  /* navigation bar avatar style */
+  .picture-avatar {
+    position: relative;
+    background-size: cover;
+    grid-area: picture-avatar;
+    background: url(../images/Avatar.png) no-repeat;
+    width: 5vh; /* as nav-bar-grid size in vh */
+    height: 5vh;
+    min-width: 32px; /* picture size 64*64 */
+    min-height: 32px;
+    display: inside;
+  
+  
+  
+  }
+}
+
+
+  /* media query for mobile phones */
+
+@media screen and (max-width:480px) {
+
+    .container4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "picture1"
+        "picture2"
+        "picture3"
+        "picture4"
+        "picture5";
+      }
+  
+  
+  
+      .nav-bar-grid{
+        display:grid;
+        height: 10vh;
+        grid-template-rows: 2fr 0fr 4fr;
+        
+      grid-template-areas: 
+      "picture-avatar"
+       "name-text"
+       "nav-bar-style";
+      opacity: 70%;
+      background-color: lightgrey;
+      overflow: hidden;
+      }
+  
+  .text-subheader{
+    visibility:hidden; /* text not visible as not important */
+  }
+  
+  .text-on-image{
+    font-size: 2vh;
+  }
+  
+  
+  /* navigation bar avatar style */
+  .picture-avatar {
+    position: relative;
+    background-size: cover;
+    grid-area: picture-avatar;
+    background: url(../images/Avatar.png) no-repeat;
+    width: 5vh; /* as nav-bar-grid size in vh */
+    height: 5vh;
+    min-width: 32px; /* picture size 64*64 */
+    min-height: 32px;
+    display: inside;
+  
+  
+  
+  }
+}

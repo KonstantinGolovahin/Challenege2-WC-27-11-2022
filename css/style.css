@@ -65,7 +65,7 @@ ul.ul-links li {
 
 .text-ul-links-navbar{
   color: blue;
- 
+  font-weight: bold;
   text-decoration: underline;
 }
 .text-ul-links-navbar:hover{
@@ -187,7 +187,7 @@ opacity: 1;
 }
 
 
-/* picture details */
+/* Each picture details */
 #picture-app-pre-work {
   
   background-image: url(../images/02-portfolio-1.jpg); 
@@ -297,44 +297,3 @@ ul.ul-links-user li {
 
 
 
-/* media query for smaller screens */
-
-@media screen and (max-width:700px) {
-
-  .container4 {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas:
-      "picture1"
-      "picture2"
-      "picture3"
-      "picture4"
-      "picture5";
-    }
-
-
-
-    .nav-bar-grid{
-      display:grid;
-      height: 20vh;
-      grid-template-rows: 1fr 0fr 4fr;
-      
-    grid-template-areas: 
-    "picture-avatar"
-     "name-text"
-     "nav-bar-style";
-    opacity: 70%;
-    background-color: lightgrey;
-    overflow: hidden;
-    }
-
-.text-subheader{
-  visibility:hidden; /* text not visible as not important */
-}
-
-.text-on-image{
-  font-size: 0.8vh;
-}
-
-}
