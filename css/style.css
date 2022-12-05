@@ -23,7 +23,7 @@ h1, h2{
   height: 5vh;
   background-color: lightgrey;
   opacity: 70%;
-  overflow: hidden; /* hides part of text if resized too much */
+  overflow: hidden; /* hides this text if screen width is too small */
 }
 
 /* navigation bar style */
@@ -44,18 +44,33 @@ overflow: hidden;
   grid-area: nav-bar-style;
 }
 
+
+
+
+
 /* navigation bar links style */
 .ul-links {
   display: flex;
   column-gap: 50px;
   justify-content: right;
   align-items: center;
-  color: blue;
   
+    
 }
+
 
 ul.ul-links li {
   list-style: none;
+}
+
+.text-ul-links-navbar{
+  color: blue;
+ 
+  text-decoration: underline;
+}
+.text-ul-links-navbar:hover{
+  color: red;
+  
 }
 
 
@@ -163,7 +178,14 @@ ul.ul-links li {
   background-size: cover;
   border: 5px solid;
   border-color: lightblue;
+opacity: 1;
 }
+
+/* picture hover effect */
+.picture-app:hover{ 
+  opacity: 0.8;
+}
+
 
 /* picture details */
 #picture-app-pre-work {
@@ -218,6 +240,11 @@ ul.ul-links li {
 
 }
 
+/* picture text colour on mouse hover */
+.text-on-image p:hover {
+  color: red;
+}
+
 /* nested grid ends */
 
 #continer-header-contacts {
@@ -248,15 +275,25 @@ ul.ul-links li {
   display: flex;
   column-gap: 100px;
   justify-content: center;
-  color: black;
   vertical-align: middle;
+  
   
 }
 
-ul.ul-links li {
-  list-style: none;
+ul.ul-links-user li {
+  list-style: none; /* removes list elements style */
 }
-
+ /* Links text style */
+.ul-links-text{
+  
+  color: blue;
+}
+ /* Links text style on hover*/
+.ul-links-text:hover{
+  
+  color: red;
+  
+}
 
 
 
